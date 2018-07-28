@@ -1,0 +1,15 @@
+/target/
+**/*.rs.bk
+
+# Pycharm
+*.iws
+workspace.xml
+
+/*.dll
+/gfx_libs/
+/node_modules/
+*/build/
+*/dist/
+*.wasm
+*/from_rust.*
+*.log
