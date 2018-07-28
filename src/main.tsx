@@ -168,7 +168,6 @@ class Main extends React.Component<any, any> {
 
 rust.then(
     r => {
-        console.log("TEST")
         state.setSceneLib(util.deserSceneLib(r.scene_lib()))
         state.setScene(0)
         // Don't render until we've imported and initialized the scenes.
