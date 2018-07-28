@@ -180,7 +180,9 @@ rust.then(
             )
         )
         ReactDOM.render(<Main />, document.getElementById('root') as HTMLElement)
+    console.log("TEST")
     }
+
 )
 
 
