@@ -137,15 +137,10 @@ function drawScene(
 
             // Set the shader uniforms
 
-            let modelMat  = modelMatMaker(shape.orientation, shape.scale)
-            // let modelMatJs = transforms.makeModelMat4(shape.orientation, shape.scale)
-
             gl.uniformMatrix4fv(
                 programInfo.uniformLocations.modelMatrix,
                 false,
-                // modelMatMaker(shape.orientation, shape.scale)
-                // transforms.makeModelMat4(shape)
-                modelMat
+                modelMatMaker(shape.orientation, shape.scale)
             )
             gl.uniformMatrix4fv(
                 programInfo.uniformLocations.viewMatrix,
@@ -429,23 +424,7 @@ export function main(viewMatMaker: Function, modelMatMaker: Function,
     // These buffers don't change; eg index buffers.  todo put static buffers back here?!
     // let staticBuffers = initBuffers(gl, state.shapes, state.skybox)
 
-    // Note: If we want dynamically-adjustable FOV, we need to move this,
-    // or part of it to drawScene.
-    // let projectionMatrix = mat4.create()
-    // // note: glmatrix.js always has the first argument
-    // // as the destination to receive the result.
-    // mat4.perspective(
-    //     projectionMatrix,
-    //     state.scene.cam.fov,
-    //     state.scene.cam.aspect,
-    //     state.scene.cam.near,
-    //     state.scene.cam.far
-    // )
-
-    // let projectionMatrix = transforms.makeProjMat(state.scene.cam)
     let projectionMatrix = makeProj(state.scene.cam)
-
-    // modelMatMaker(state.scene.shapes.get(0).orientation, state.scene.shapes.get(0).scale)
 
     // Draw the scene repeatedly
     function render(now: number) {
