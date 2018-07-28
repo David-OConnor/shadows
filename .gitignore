@@ -1,10 +1,4 @@
-
-# Pycharm
-*.iws
-workspace.xml
-
 /*.dll
-/gfx_libs/
 /node_modules/
 */from_rust.*
 *.log
