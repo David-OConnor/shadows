@@ -34,6 +34,7 @@ class Controls extends React.Component<any, any> {
 
                     <Button bsStyle="primary" onClick={() => this.props.setScene(0)}>Hypercube</Button>
                     <Button bsStyle="primary" onClick={() => this.props.setScene(1)}>5-cell</Button>
+                    <Button bsStyle="primary" onClick={() => this.props.setScene(10)}>24-cell</Button>
                     <Button bsStyle="primary" onClick={() => this.props.setScene(2)}>Spherinder</Button>
                     {/*<Button bsStyle="primary" onClick={() => this.props.setScene(3)}>Cube</Button>*/}
                     {/*<Button bsStyle="primary" onClick={() => this.props.setScene(4)}>Pyramid</Button>*/}
