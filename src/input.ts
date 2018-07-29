@@ -117,7 +117,7 @@ export function handlePressed(makeRotator: Function, pressed: number[], deltaT: 
                 } else if (camType === 'fps') {
                     console.log()
                 } else {
-                    state.scene.cam.θ[0] += rotateAmount
+                    state.scene.cam.θ[0] -= rotateAmount  // todo rolls are backwards; not sure hwy
                 }
                 break
             case 81:  // Q
@@ -126,7 +126,7 @@ export function handlePressed(makeRotator: Function, pressed: number[], deltaT: 
                 } else if (camType === 'fps') {
                     console.log()
                 } else {
-                    state.scene.cam.θ[0] -= rotateAmount
+                    state.scene.cam.θ[0] += rotateAmount
                 }
                 break
             case 45:  // Ins
@@ -195,7 +195,9 @@ function moveCam(makeRotator: Function, unitVec: Float32Array, amount: number, f
     // Modifies the global camera
     // With first-person-shooter controls, ignore all input except rotation
     // around the y axis.
-    const θ = fps ? [0, 0, state.scene.cam.θ[2], 0, 0, 0] : state.scene.cam.θ
+    // const θ = fps ? [0, 0, state.scene.cam.θ[2], 0, 0, 0] : state.scene.cam.θ
+    const θ = fps ? [0, 0, -state.scene.cam.θ[2], 0, 0, 0] :
+        [-state.scene.cam.θ[0], -state.scene.cam.θ[1], -state.scene.cam.θ[2], 0, 0, 0]
     const R = makeRotator(θ)
 
     let v = new Float32Array(4)
