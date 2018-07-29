@@ -37,8 +37,8 @@ class Controls extends React.Component<any, any> {
                     <Button bsStyle="primary" onClick={() => this.props.setScene(2)}>Spherinder</Button>
                     {/*<Button bsStyle="primary" onClick={() => this.props.setScene(3)}>Cube</Button>*/}
                     {/*<Button bsStyle="primary" onClick={() => this.props.setScene(4)}>Pyramid</Button>*/}
-                    {/*<Button bsStyle="primary" onClick={() => this.props.setScene(5)}>Small world</Button>*/}
-                    <Button bsStyle="primary" onClick={() => this.props.setScene(6)}>Grid</Button>
+                    <Button bsStyle="primary" onClick={() => this.props.setScene(5)}>Small world</Button>
+                    <Button bsStyle="primary" onClick={() => this.props.setScene(6)}>Grid 3d</Button>
                     <Button bsStyle="primary" onClick={() => this.props.setScene(7)}>Grid 4d</Button>
                     <Button bsStyle="primary" onClick={() => this.props.setScene(8)}>Plot</Button>
                     <Button bsStyle="primary" onClick={() => this.props.setScene(9)}>Origin</Button>
