@@ -38,7 +38,7 @@ class Controls extends React.Component<any, any> {
                     <Button bsStyle="primary" onClick={() => this.props.setScene(2)}>Spherinder</Button>
                     {/*<Button bsStyle="primary" onClick={() => this.props.setScene(3)}>Cube</Button>*/}
                     {/*<Button bsStyle="primary" onClick={() => this.props.setScene(4)}>Pyramid</Button>*/}
-                    <Button bsStyle="primary" onClick={() => this.props.setScene(5)}>Small world</Button>
+                    {/*<Button bsStyle="primary" onClick={() => this.props.setScene(5)}>Small world</Button>*/}
                     <Button bsStyle="primary" onClick={() => this.props.setScene(6)}>Grid 3d</Button>
                     <Button bsStyle="primary" onClick={() => this.props.setScene(7)}>Grid 4d</Button>
                     <Button bsStyle="primary" onClick={() => this.props.setScene(8)}>Plot</Button>
@@ -132,12 +132,6 @@ class Main extends React.Component<any, any> {
         state.setScene(sceneId)
     }
 
-    setSubscene(subScene: number) {
-        // state.emptyStaticBuffers()
-        // this.setState({subScene: subScene})
-        // state.setScene([this.state.scene, subScene])
-    }
-
     render() {
         let instructions
         let camType = state.scene.cam_type  // code shortener
@@ -155,7 +149,6 @@ class Main extends React.Component<any, any> {
             <div>
                 <Controls
                     setScene={this.setScene}
-                    setSubscene={this.setSubscene}
                     showShapeBtns={this.state.scene === 0}
                     showHyperBtns={this.state.scene === 3}
                 />
